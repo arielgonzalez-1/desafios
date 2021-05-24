@@ -1,12 +1,8 @@
 # Plataformas
 * [URI Online Judge](https://www.urionlinejudge.com.br/)
-
 * [SoloLearn](https://www.sololearn.com/home)
-
 * [Frontedn Mentor](https://www.frontendmentor.io/)
-
 * [Advent of Code](https://adventofcode.com/2020/about)
-
 * [OmegaUp](https://omegaup.com/)
 
 ## ¿Qué GIT?
@@ -26,7 +22,7 @@ GIT consta de 3 estados:
     ```
 2. Clonar repositorio:
     ``` bash
-    git clone https://github.com/c05m4r/tp1POO.git
+    git clone https://github.com/c05m4r/desafios.git
     ```
 3. Pasar del Working Directory a Staging Area:
     ``` bash
