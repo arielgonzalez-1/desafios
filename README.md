@@ -1,9 +1,9 @@
 # Plataformas
-    * [URI Online Judge](https://www.urionlinejudge.com.br/)
-    * [SoloLearn](https://www.sololearn.com/home)
-    * [Frontedn Mentor](https://www.frontendmentor.io/)
-    * [Advent of Code](https://adventofcode.com/2020/about)
-    * [OmegaUp](https://omegaup.com/)
+    *[URI Online Judge](https://www.urionlinejudge.com.br/)
+    *[SoloLearn](https://www.sololearn.com/home)
+    *[Frontedn Mentor](https://www.frontendmentor.io/)
+    *[Advent of Code](https://adventofcode.com/2020/about)
+    *[OmegaUp](https://omegaup.com/)
 
 ## ¿Qué GIT?
 [GIT](https://git-scm.com/) es un [Sistema de Control de Versiones](https://es.wikipedia.org/wiki/Control_de_versiones) (CVS), su utilidad se encuentra en cómo el mismo gestiona proyectos logrando que puedas volver en el tiempo a determinados estados y coordinar tu proyecto entre varias personas.
