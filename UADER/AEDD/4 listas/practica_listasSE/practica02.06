@@ -1,0 +1,12 @@
+c05m4r, [02.06.21 18:21]
+EJERCICIO 7 
+Desarrolle un algoritmo que  a partir de una pila que contiene los siguientes datos: DNI, Nombre, Apellido y Edad de los alumnos de una clase, genere una lista de los Alumnos cuya edad  sea mayor 19 años.
+
+c05m4r, [02.06.21 19:04]
+Ejercicio 8 
+Realice una función que busque en una LDE todos los codigos de productos que se encuentran en una pila.
+
+c05m4r, [02.06.21 19:38]
+EJERCICIO 9
+
+9.- Realice una función que realice la eliminación de las ocurrencias de un Valor N en una Ldoble Enlazada dada.

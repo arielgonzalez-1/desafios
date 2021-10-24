@@ -1,0 +1,6 @@
+1.- Dada una LSE Cuyos datos son valores enteros, obtener el promedio de los valores contenidos.
+2.-  Dadas 2 LSE  L1 y L2 unir las dos listas de forma que la ultima celda de L1 se enlace con la primera celda de L2. De esta forma, mediante L1 veríamos una larga lista con la concatenación de ambas.
+3  Se dispone de una cola dinamica. Hacer un algoritmo que solicite el ingreso de un valor numerico si el valor ingresado es positivo se debe agregar en la cola una celda que lo contenga. Si el valor es negativo debe eliminar una celda y si  el valor ingresado es cero debe finalizar el algoritmo.
+
+4.- Realice una función que realice el alta de un valor  al inicio de una  LSE.
+5.- Realice una función que realice el alta de un valor en una LSE ordenada, manteninedose el orden de la misma.

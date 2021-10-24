@@ -1,0 +1,4 @@
+1) Realice un programa que  acceda  el vector con un puntero  y guarde en el vector datos ingresados por el usuario en dicho vector.
+2) Realice un programa que acceda al vector con un puntero y calcule el promedio de los datos del vector.
+3) Cree un tipo de datos struct al cual pueda acceder  en forma dinamica
+4) Cálculo del sueldo de los agentes en una empresa Queremos implementar un programa que calcule e imprima en pantalla el sueldo de los 20 agentes de ventas de una empresa. Cada agente cobra un sueldo fijo de 1000 Cmás un incentivo, que será un 10 % de las ventas que ha realizado. Sin embargo, dicho incentivo no será percibido por todos los agentes, sino sólo por aquellos cuyas ventas superen los 2/3 de la media de ventas del total de los agentes.
