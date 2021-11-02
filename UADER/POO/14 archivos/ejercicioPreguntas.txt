@@ -1,0 +1,3 @@
+Una empresa de encuestas lo contrata para realizar un software de preguntas y respuestas. El usuario va a poder hacer un cuestionario con dicho software. Además dicho cuestionario tiene la particularidad que una respuesta desate otra pregunta o no.
+Por ejemplo, “Utiliza jabón en polvo?” si la persona contesta sí, se debe mostrar la pregunta: “que marca? “ de lo contrario no debe mostrar esta pregunta. 
+Realice el software que permita cargar el cuestionario y guardarlo en archivos binarios. 
