@@ -1,8 +1,13 @@
-#include <QCoreApplication>
+#include <iostream>
+#include <admin.h>
+using namespace std;
 
-int main(int argc, char *argv[])
+int main()
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    Admin* obj = new Admin();
+    obj->generadorEnteros();
+    obj->ordenarAscendente();
+    //obj->ordenarDescendente();
+    cout << obj->mostrarEnteros();
+    return 0;
 }
