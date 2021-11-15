@@ -159,7 +159,7 @@ void GestorArchivos::setConfig(dataConfig x){
     }
 }
 
-dataConfig GestorArchivos::getConfig()
+dataConfig GestorArchivos::LeerConfig()
 {
     string buffer;
     dataConfig aux;

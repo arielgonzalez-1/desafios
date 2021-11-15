@@ -13,17 +13,18 @@ public:
 
     void crearPastizal();
 
+    //Setters
     void setTipo(int tipo);
     void setPastizal(bool estado,int crece,int muere);
     void setEstado(bool estado);
     void setCrece(int x);
     void setMuere(int x);
 
+    //Getters
     int getTipo();
     bool getEstado();
     int getCrece();
     int getMuere();
-
     bool tienePasto();
 
 

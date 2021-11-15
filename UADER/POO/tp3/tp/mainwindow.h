@@ -25,7 +25,7 @@ private slots:
     void on_RecuperarSimulacion_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow * ui;
     GestorArchivos * miGestor = NULL;
     Simulacion * miSimulacion = NULL;
 };

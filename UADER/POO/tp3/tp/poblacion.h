@@ -8,6 +8,7 @@ private:
     int coordX;
     int coordY;
     char tipo;
+
 public:
     Poblacion();
     Poblacion(char tipo);

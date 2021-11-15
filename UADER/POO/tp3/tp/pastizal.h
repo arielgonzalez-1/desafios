@@ -14,12 +14,10 @@ public:
     //Constructor para crear pastizales que recupero
     Pastizal(bool estado, int crece, int muere);
 
-
     // *********** Set ***********
     void setEstado(bool estado);
     void setCrece(int crece);
     void setMuere(int muere);
-
 
     // *********** Get ***********
     bool getEstado();

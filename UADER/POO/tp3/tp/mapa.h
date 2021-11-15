@@ -22,7 +22,6 @@ public:
     //Crea mapa para iniciar una simulacion nueva
     void crearMapa(int cantpastos);
 
-
     // *********** Set ***********
 
     //Mapa

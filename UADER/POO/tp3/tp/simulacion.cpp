@@ -6,6 +6,7 @@ Simulacion::Simulacion()
     mapa = NULL;
 }
 
+//crea simulacion nueva/cargada
 Simulacion::Simulacion(int f, int c, int mpasto, int tipoA, int tipoB, int cantDias, int tiempo)
 {
     this->cantPoblaciones = 0;
@@ -24,7 +25,7 @@ Simulacion::Simulacion(int f, int c, int mpasto, int tipoA, int tipoB, int cantD
 
 void Simulacion::agregarPoblacion(char dato)
 {
-    Poblacion * nuevo= new Poblacion(dato);
+    Poblacion * nuevo = new Poblacion(dato);
 
     bool band = false;
     int i; int j;
@@ -45,7 +46,6 @@ void Simulacion::agregarPoblacion(char dato)
 
 void Simulacion::ControlSimulacion()
 {
-    //controlPoblaciones();
     accionPoblacion();
     controlPoblaciones();
     actualizarCasillerosCiervos();
@@ -109,11 +109,9 @@ void Simulacion::actualizarCasillerosCiervos()
 
 void Simulacion::actualizarMapa()
 {
-    for(int i=0;i<mapa->getFilas();i++){
-        for(int j=0;j<mapa->getColumnas();j++){
+    for(int i=0;i<mapa->getFilas();i++)
+        for(int j=0;j<mapa->getColumnas();j++)
             mapa->modificarmapa(i,j);
-        }
-    }
 }
 
 void Simulacion::moverPoblaciones()
@@ -179,59 +177,39 @@ void Simulacion::moverPoblaciones()
     }
 }
 
-bool Simulacion::tienePasto(int i, int j)
-{
-    return mapa->tienePasto(i,j);
-}
+bool Simulacion::tienePasto(int i, int j){ return mapa->tienePasto(i,j); }
 
+int Simulacion::getTipoCasillero(int i, int j){ return mapa->getTipo(i,j); }
 
-int Simulacion::getTipoCasillero(int i, int j)
-{
-    return mapa->getTipo(i,j);
-}
+bool Simulacion::getEstadoPastizal(int i, int j) { return mapa->getEstado(i,j); }
 
-bool Simulacion::getEstadoPastizal(int i, int j)
-{
-    return mapa->getEstado(i,j);
-}
+int Simulacion::getCrecePastizal(int i, int j) { return mapa->getCrece(i,j); }
 
-int Simulacion::getCrecePastizal(int i, int j)
-{
-    return mapa->getCrece(i,j);
-}
-
-int Simulacion::getMuerePastizal(int i, int j)
-{
-    return mapa->getMuere(i,j);
-}
+int Simulacion::getMuerePastizal(int i, int j) { return mapa->getMuere(i,j); }
 
 int Simulacion::getSinComerPoblacion(int i, int j)
 {
-    for(auto k=poblaciones.begin(); k!=poblaciones.end(); ++k){
-        if(k->getCoordX() == i && k->getCoordY() == j){
+    for(auto k=poblaciones.begin(); k!=poblaciones.end(); ++k)
+        if(k->getCoordX() == i && k->getCoordY() == j)
             return k->getSincomer();
-        }
-    }
     return -1;
 }
 
 int Simulacion::getcoordXPoblacion(int i, int j)
 {
-    for(auto k=poblaciones.begin();k!=poblaciones.end();++k){
-        if(k->getCoordX() == i && k->getCoordY() == j){
+    for(auto k=poblaciones.begin();k!=poblaciones.end();++k)
+        if(k->getCoordX() == i && k->getCoordY() == j)
             return k->getCoordX();
-        }
-    }
+
     return -1;
 }
 
 int Simulacion::getcoordYPoblacion(int i, int j)
 {
-    for(auto k=poblaciones.begin();k!=poblaciones.end();++k){
-        if(k->getCoordX() == i && k->getCoordY() == j){
+    for(auto k=poblaciones.begin();k!=poblaciones.end();++k)
+        if(k->getCoordX() == i && k->getCoordY() == j)
             return k->getCoordY();
-        }
-    }
+
     return -1;
 }
 
@@ -250,41 +228,24 @@ dataPoblacion Simulacion::getPoblacion(int j)
         }
         cont++;
     }
-
-    /*int cont=0;
-    for(auto i=poblaciones.begin();i!=poblaciones.end(); ++i){
-        if(cont==j){
-            aux.tipo = i->getTipo();
-            aux.coordX = i->getCoordX();
-            aux.coordY = i->getCoordY();
-            aux.sincomer = i->getSincomer();
-            return aux;
-        }
-        cont++;
-    }*/
-
     return aux;
 }
-
 
 int Simulacion::getFilas() { return mapa->getFilas(); }
 
 
 int Simulacion::getColumnas() { return mapa->getColumnas(); }
 
-
 int Simulacion::getCantPoblaciones() { return cantPoblaciones; }
-
 
 char Simulacion::getPoblacion(int l,int x, int y)
 {
     int cont=0;
     for(auto i = poblaciones.begin(); i != poblaciones.end(); ++i){
-        if(cont == l){
-            if(i->getCoordX() == x && i->getCoordY() == y){
+        if(cont == l)
+            if(i->getCoordX() == x && i->getCoordY() == y)
                 return i->getTipo();
-            }
-        }
+
         cont++;
     }
     return 'N';
@@ -292,27 +253,25 @@ char Simulacion::getPoblacion(int l,int x, int y)
 
 int Simulacion::getDiaActual() { return diaActual; }
 
-
 int Simulacion::getCantDias() { return cantDias; }
-
 
 int Simulacion::getTiempo() { return tiempo; }
 
 int Simulacion::getCantA()
 {
     int cont=0;
-    for(auto i=poblaciones.begin();i!=poblaciones.end();++i){
+    for(auto i=poblaciones.begin();i!=poblaciones.end();++i)
         if(i->getTipo() == 'A') cont++;
-    }
+
     return cont;
 }
 
 int Simulacion::getCantB()
 {
     int cont=0;
-    for(auto i=poblaciones.begin();i!=poblaciones.end();++i){
+    for(auto i=poblaciones.begin();i!=poblaciones.end();++i)
         if(i->getTipo() == 'B') cont++;
-    }
+
     return cont;
 }
 
@@ -323,7 +282,6 @@ void Simulacion::setPoblacion(char tipo, int x, int y, int sincomer)
     aux.setTipo(tipo); aux.setCoordX(x); aux.setCoordY(y), aux.setsincomer(sincomer);
     poblaciones.push_back(aux);
 }
-
 
 void Simulacion::setMapa(int f, int c) { this->mapa = new Mapa(f,c); }
 
@@ -353,13 +311,11 @@ void Simulacion::setPastizalCasillero(int i, int j, bool estado, int crece, int 
     this->mapa->setPastizal(i,j,estado,crece,muere);
 }
 
-
 Simulacion::~Simulacion()
 {
-    //mapa->~Mapa();
+    mapa->~Mapa();
 
-    for(int i=0; i<cantPoblaciones; i++){
+    for(int i=0; i<cantPoblaciones; i++)
         poblaciones.pop_back();
-    }
 }
 

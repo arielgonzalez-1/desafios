@@ -11,7 +11,6 @@ Mostrar_Simulacion::Mostrar_Simulacion(QWidget *parent) :
     ui->setupUi(this);
     timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),this,SLOT(iteracionMapa()));
-
 }
 
 Mostrar_Simulacion::~Mostrar_Simulacion()
@@ -154,6 +153,7 @@ void Mostrar_Simulacion::on_EjecutarSimulacion_clicked()
 
 void Mostrar_Simulacion::on_SalirSimulacion_clicked()
 {
+    this->timer->stop();
     simulacion->~Simulacion();
     close();
 }

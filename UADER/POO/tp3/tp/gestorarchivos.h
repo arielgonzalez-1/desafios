@@ -56,7 +56,7 @@ public:
 
     void setConfig(dataConfig x);
 
-    dataConfig getConfig();
+    dataConfig LeerConfig();
 
 };
 

@@ -9,8 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowTitle("Simulacion de ciervos colorados");
     miGestor = new GestorArchivos;
 
-    miGestor->getConfig();
-    dataConfig datos = miGestor->getConfig();
+    miGestor->LeerConfig();
+    dataConfig datos = miGestor->LeerConfig();
     this->ui->SpinFilas->setValue(datos.filas);
     this->ui->SpinColumnas->setValue(datos.columnas);
     this->ui->SpinMesetas->setValue(datos.mpasto);
@@ -18,7 +18,6 @@ MainWindow::MainWindow(QWidget *parent)
     this->ui->SpinTipoB->setValue(datos.tipoB);
     this->ui->SpinDias->setValue(datos.dias);
     this->ui->SpinTiempo->setValue(datos.tiempo);
-
 }
 
 MainWindow::~MainWindow()
@@ -49,7 +48,6 @@ void MainWindow::on_Simular_clicked()
     data.tipoA = this->ui->SpinTipoA->text().toInt();
     data.tipoB = this->ui->SpinTipoB->text().toInt();
 
-
     data.dias = this->ui->SpinDias->text().toInt();
     data.tiempo = this->ui->SpinTiempo->text().toInt();
 
@@ -75,9 +73,6 @@ void MainWindow::on_RecuperarSimulacion_clicked()
         if(respuesta1 == QMessageBox::Ok)
             ventana->show();
     }else{
-        //QMessageBox::StandardButton respuesta1;
-        //respuesta1 =
                 QMessageBox::critical(this,"ERROR","No hay simulacion guardada",QMessageBox::Ok);
-        //if(respuesta1 == QMessageBox::Ok){}
     }
 }

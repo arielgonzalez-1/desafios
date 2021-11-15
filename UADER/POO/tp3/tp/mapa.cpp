@@ -3,7 +3,6 @@
 Mapa::Mapa()
 {
     mapa = NULL;
-
 }
 
 Mapa::Mapa(int f,int c){
@@ -78,7 +77,6 @@ void Mapa::crearMapa(int cantpastos){
                 }
             }
         }
-
     }
     cont = 0;
 

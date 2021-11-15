@@ -15,6 +15,7 @@ using namespace std;
 
 class Simulacion
 {
+private:
     Mapa * mapa;
     vector<Poblacion> poblaciones;
     int cantPoblaciones;
