@@ -2,6 +2,8 @@
 //Miller, Marcos
 //Suquilvide, Jeronimo
 
+//Solucion que SI contempla bordes
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
