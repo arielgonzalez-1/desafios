@@ -1,6 +1,6 @@
 # Plataformas
-* [URI Online Judge](https://www.urionlinejudge.com.br/)
-* [SoloLearn](https://www.sololearn.com/home)
+* [Beecrowd (ex URI Online Judge)](https://www.beecrowd.com.br/judge/es/profile/427859)
+* [SoloLearn](https://www.sololearn.com/profile/8636629)
 * [Frontedn Mentor](https://www.frontendmentor.io/)
 * [Advent of Code](https://adventofcode.com/2020/about)
 * [OmegaUp](https://omegaup.com/)
