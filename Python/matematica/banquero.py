@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+"""
+Para su uso se debe instalar:
+pip3 install colorama
+pip3 install numpy
+pip3 install terminaltables
+"""
+
+import os
 import colorama
 from colorama import Fore
 from terminaltables import SingleTable
 import numpy as np
+
 
 class Main:
     def __init__(self):

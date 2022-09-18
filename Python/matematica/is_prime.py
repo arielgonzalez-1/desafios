@@ -6,7 +6,6 @@ from datetime import datetime
 import multiprocessing as mp
 from multiprocessing import Pool
 from math import sqrt
-from traceback import print_tb
 
 def is_prime(num: int) -> bool:
     if num % 2 == 0 or num in [0, 1]:
@@ -39,7 +38,7 @@ if __name__ == '__main__':
     # print(sys.getrecursionlimit())
     # sys.setrecursionlimit(99999999)
 
-    x = int(input('Ingresa un numero natural\n'))
+    x = int(input('Ingrese un numero natural\n'))
     start = datetime.now()
     pool = Pool(processes=mp.cpu_count())
     result = pool.map_async(print_all, range(x))
