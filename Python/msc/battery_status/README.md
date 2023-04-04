@@ -34,38 +34,54 @@
 
 6. Configurar ejecucion del script al iniciar el sistema
 
-    1. Crear el servicio para systemd
-
-        ``` bash
-        sudo touch /etc/systemd/system/battery_status.service
-        ```
-
-    2. Editarlo de la forma
-
-        ``` 
-        [Unit]
-        Description=Show low battery notification
+    1. Usando Crontab
         
-        [Service]
-        Type=simple
-        ExecStart=/usr/local/bin/battery_status.py
-        Restart=on-failure
-        RestartSec=10
-        KillMode=process
+        1. Ejecutar el siguiente comando
+
+            ``` bash
+            crontab -e
+            ```
+
+        2. Agregar la siguiente línea
         
-        [Install]
-        WantedBy=multi-user.target
-        ```
+            ``` bash
+            @reboot /usr/local/bin/battery_status.py
+            ```
 
-    3. Comprobar el estado del servicio
-
-        ``` bash
-        systemctl status battery_status
-        ```
-
-    4. Iniciar el servicio
-
-        ``` bash
-        sudo systemctl start battery_status
-        sudo systemctl enable battery_status
-        ```
+    2. Usando systemd
+    
+        1. Crear el servicio para systemd
+    
+            ``` bash
+            sudo touch /etc/systemd/system/battery_status.service
+            ```
+    
+        2. Editarlo de la forma
+    
+            ``` 
+            [Unit]
+            Description=Show low battery notification
+            
+            [Service]
+            Type=simple
+            ExecStart=/usr/local/bin/battery_status.py
+            Restart=on-failure
+            RestartSec=10
+            KillMode=process
+            
+            [Install]
+            WantedBy=multi-user.target
+            ```
+    
+        3. Comprobar el estado del servicio
+    
+            ``` bash
+            systemctl status battery_status
+            ```
+    
+        4. Iniciar el servicio
+    
+            ``` bash
+            sudo systemctl start battery_status
+            sudo systemctl enable battery_status
+            ```
