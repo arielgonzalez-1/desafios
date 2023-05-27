@@ -1,0 +1,3 @@
+[submodule "modulo_prueba"]
+	path = modulo_prueba
+	url = ./modulo_prueba/
