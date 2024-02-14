@@ -1,3 +1,5 @@
+Un simple repositorio donde publico soluciones a problemas resueltos cuando tengo tiempo libre.
+
 # Plataformas
 
 ## InfoSec
